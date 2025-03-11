@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { BookmarkController } from './bookmark.controller';
 import { BookmarkService } from './bookmark.service';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { User } from 'src/user/user.model';
+import { User } from 'src/modules/user/user.model';
 import { Bookmark } from './bookmark.model';
 
 @Module({

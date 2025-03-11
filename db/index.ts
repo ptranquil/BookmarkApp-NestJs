@@ -1,6 +1,6 @@
 import { SequelizeModule } from '@nestjs/sequelize';
-import { Bookmark } from 'src/bookmark/bookmark.model';
-import { User } from 'src/user/user.model';
+import { Bookmark } from 'src/modules/bookmark/bookmark.model';
+import { User } from 'src/modules/user/user.model';
 
 export const dbModule = SequelizeModule.forRoot({
   dialect: 'postgres',

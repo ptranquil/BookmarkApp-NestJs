@@ -5,7 +5,7 @@ import {
   DataType,
   HasMany,
 } from 'sequelize-typescript';
-import { Bookmark } from 'src/bookmark/bookmark.model';
+import { Bookmark } from 'src/modules/bookmark/bookmark.model';
 
 @Table({ tableName: 'users' })
 export class User extends Model {
