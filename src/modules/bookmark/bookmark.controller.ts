@@ -1,11 +1,12 @@
 import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 import { BookmarkService } from './bookmark.service';
 import { bookmarkDto } from './dto/bookmark.dto';
+import { ConfigService } from '@nestjs/config';
 
 @Controller('bookmark')
 export class BookmarkController {
 
-    constructor(private bookmarkService : BookmarkService){}
+    constructor(private bookmarkService : BookmarkService, private configService: ConfigService ){}
 
     @Get()
     getBookmarks(): any{

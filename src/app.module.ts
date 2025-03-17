@@ -4,9 +4,12 @@ import { BookmarkModule } from './modules/bookmark/bookmark.module';
 import { UserModule } from './modules/user/user.module';
 import { dbModule } from 'db';
 import { Sequelize } from 'sequelize-typescript';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [dbModule, AuthModule, UserModule, BookmarkModule],
+  imports: [ConfigModule.forRoot({
+    isGlobal: true
+  }), dbModule, AuthModule, UserModule, BookmarkModule],
   controllers: [],
   providers: [],
 })
